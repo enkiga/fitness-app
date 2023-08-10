@@ -3,6 +3,8 @@ import {BenefitType, SelectedPage} from "@/shared/types";
 import {motion} from "framer-motion";
 import HText from "@/shared/HText.tsx";
 import Benefit from "@/scenes/benefits/Benefit";
+import ActionButton from "@/shared/ActionButton";
+import BenefitsPageGraphics from "@/assets/BenefitsPageGraphic.png";
 
 
 const benefits: Array<BenefitType> = [
@@ -77,6 +79,76 @@ const Benefits = ({setSelectedPage}: Props) => {
                         setSelectedPage={setSelectedPage}/>
                 ))}
             </motion.div>
+
+            {/* Graphics and description*/}
+            <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+                {/* Graphics */}
+                <img
+                    className="mx-auto"
+                    alt="benefits-page-graphics"
+                    src={BenefitsPageGraphics}/>
+                {/* Description */}
+                <div>
+                    {/* Title */}
+                    <div className="relative">
+                        <div
+                            className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{once: true, amount: 0.5}}
+                                transition={{duration: 0.5}}
+                                variants={{
+                                    hidden: {opacity: 0, x: 50},
+                                    visible: {opacity: 1, x: 0},
+                                }}>
+                                <HText>
+                                    MILLION OF HAPPY MEMBERS GETTING {" "}
+                                    <span className="text-primary-500">FIT</span> AT OUR GYM
+                                </HText>
+                            </motion.div>
+
+                        </div>
+                    </div>
+                    {/* Description */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.5}}
+                        transition={{delay: 0.2, duration: 0.5}}
+                        variants={{
+                            hidden: {opacity: 0, x: 50},
+                            visible: {opacity: 1, x: 0},
+                        }}>
+                        <p className="my-5">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                            accusantium adipisci aliquam amet aperiam asperiores aspernatur
+                            assumenda atque autem blanditiis consequatur consequuntur cumque
+                            cupiditate delectus deleniti dicta dignissimos dolorum ducimus
+                            earum eius eligendi eos error est eum eveniet excepturi expedita
+                            facilis fugiat fugit harum hic id illum impedit in incidunt ipsa
+                        </p>
+                        <p className="mb-5">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                            accusantium adipisci aliquam amet aperiam asperiores aspernatur
+                            assumenda atque autem blanditiis consequatur consequuntur cumque
+                            cupiditate delectus deleniti dicta dignissimos dolorum ducimus
+                        </p>
+                    </motion.div>
+
+                    {/* Button */}
+                    <div className="relative mt-16">
+                        <div
+                            className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                            <ActionButton setSelectedPage={setSelectedPage}>
+                                Join Now
+                            </ActionButton>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </motion.div>
     </section>
 };
