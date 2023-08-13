@@ -24,9 +24,6 @@ To run this project locally, follow these steps:
 
 You can find the live project at [fitness-app](https://fitness-app-9fv.pages.dev/).
 
-Feel free to explore, contribute, and provide feedback. Thank you for checking out Evogym Fitness App!
-
-
 ---
 
 *For additional information or inquiries, contact me at eenkiga@gmail.com*
