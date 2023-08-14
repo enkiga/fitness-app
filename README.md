@@ -1,4 +1,4 @@
-# Project Name
+# Evogym Fitness Porfolio
 
 Welcome to Evogym Fitness App! This is a frontend application built using React and TypeScript, featuring a dynamic user interface and smooth animations powered by the Motion library. 
 
